@@ -30,6 +30,8 @@ public class Cache {
     
     // whether the most recent cache access resulted in a dirity eviction
     public boolean dirtyEvic_f = false;
+
+    public boolean victim_f = false;
     
     public Cache(int capacity, int blockSize, int associativity) {
 
@@ -143,9 +145,10 @@ public class Cache {
 			}
 		}
 	}
-	
-	cacheTags[addr_index][touchedWay] = addr_tag;
-	updateLRU(addr_index, touchedWay);
+	if (victim_f == false) {
+	   cacheTags[addr_index][touchedWay] = addr_tag;
+	   updateLRU(addr_index, touchedWay);
+    }   
 	return hit_f;
     }
 

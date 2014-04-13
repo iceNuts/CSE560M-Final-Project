@@ -142,6 +142,26 @@ public class Simulator
                                 latencyCount += 100;
                         }                 
                     }
+                    else if (victimBuffer_f)
+                    {
+                        victimBuffer.victim_f = true;
+                        boolean victimBuffer_hit = victimBuffer.access(
+                         currUop.addressForMemoryOp, 
+                         wb_tag2,
+                         YES
+                        );
+                        latencyCount += 1;
+                        if (victimBuffer_hit == NO) 
+                        {
+                            // Clear flag
+                            wb_tag2[0] = -1;
+                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
+                            L2_CacheStats.updateStat(L2_hit_f);
+                            latencyCount += 10;
+                            if (L2_hit_f == false)
+                                latencyCount += 100;
+                        }  
+                    }
                     // NO miss cache available
                     else 
                     {
@@ -157,6 +177,15 @@ public class Simulator
 		    	// we need to write back
 				if (wb_tag[0] != -1) 
                 {
+                    if (victimBuffer_f)
+                    {
+                        victimBuffer.victim_f = false;
+                        boolean victimBuffer_hit = victimBuffer.access(
+                         wb_tag[0], 
+                         wb_tag2,
+                         NO
+                        );
+                    }
 					L2_Cache.access(wb_tag[0], wb_tag2, false);
                     wbCount++;
 				}
