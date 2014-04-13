@@ -128,10 +128,10 @@ public class Simulator
                         boolean missCache_hit = missCache.access(
                          currUop.addressForMemoryOp, 
                          wb_tag2,
-                         YES
+                         true
                         );
                         latencyCount += 1;
-                        if (missCache_hit == NO) 
+                        if (missCache_hit == false) 
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
@@ -148,10 +148,10 @@ public class Simulator
                         boolean victimBuffer_hit = victimBuffer.access(
                          currUop.addressForMemoryOp, 
                          wb_tag2,
-                         YES
+                         true
                         );
                         latencyCount += 1;
-                        if (victimBuffer_hit == NO) 
+                        if (victimBuffer_hit == false) 
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
@@ -183,7 +183,7 @@ public class Simulator
                         boolean victimBuffer_hit = victimBuffer.access(
                          wb_tag[0], 
                          wb_tag2,
-                         NO
+                         false
                         );
                     }
 					L2_Cache.access(wb_tag[0], wb_tag2, false);

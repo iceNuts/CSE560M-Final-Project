@@ -78,10 +78,10 @@ public class HW4
 
             if (arg.equals("-miss")) {
         
-            int blk_size = Integer.parseInt(args[i++];
+            int blk_size = Integer.parseInt(args[i++]);
             int way = Integer.parseInt(args[i++]);
             sim.missCache = new Cache(blk_size*way, 
-                    blk_size), 
+                    blk_size, 
                     way); 
 
             sim.missCache_f = true;
@@ -89,10 +89,10 @@ public class HW4
 
             if (arg.equals("-victim")) {
         
-            int blk_size = Integer.parseInt(args[i++];
+            int blk_size = Integer.parseInt(args[i++]);
             int way = Integer.parseInt(args[i++]);
             sim.victimBuffer = new Cache(blk_size*way, 
-                    blk_size), 
+                    blk_size, 
                     way); 
 
             sim.victimBuffer_f = true;
