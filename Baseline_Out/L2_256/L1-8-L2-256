@@ -1,0 +1,601 @@
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+8-way set associative cache.
+Tag = 22 bits, Index = 8 bits, Offset = 2 bits
+There are 256 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+1-way set associative cache.
+Tag = 14 bits, Index = 16 bits, Offset = 2 bits
+There are 65536 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2639944
+-----ACC----- 2703843
+0.9763673408552198
+Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
+Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-thru: 3020568
+write-thru:1.1171388279570966
+write-back:0.15920451002517527
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 19514
+-----ACC----- 26018
+0.750019217464832
+Cache Hit Rate = 75.00% (Mis-rate: 25.00%)
+Total number of bytes tranferred write-back: 34704
+Total number of bytes tranferred write-thru: 2790988
+write-thru:107.27142747328773
+write-back:1.3338457990621877
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2697339
+-----ACC----- 2703843
+0.9975945348897847
+Cache Hit Rate = 99.76% (Mis-rate: 0.24%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:69735---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 8B.
+8-way set associative cache.
+Tag = 22 bits, Index = 7 bits, Offset = 3 bits
+There are 128 sets total in the cache.
+At this associativity, that means a total of 1024 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 8B.
+1-way set associative cache.
+Tag = 14 bits, Index = 15 bits, Offset = 3 bits
+There are 32768 sets total in the cache.
+At this associativity, that means a total of 32768 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2643249
+-----ACC----- 2703843
+0.9775896751401616
+Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
+Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-thru: 3249724
+write-thru:1.2018907902566829
+write-back:0.2862266781022419
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 24798
+-----ACC----- 30588
+0.8107100823852491
+Cache Hit Rate = 81.07% (Mis-rate: 18.93%)
+Total number of bytes tranferred write-back: 61456
+Total number of bytes tranferred write-thru: 2811292
+write-thru:91.90833006407742
+write-back:2.009153916568589
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2698053
+-----ACC----- 2703843
+0.9978586034766072
+Cache Hit Rate = 99.79% (Mis-rate: 0.21%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:66733---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 16B.
+8-way set associative cache.
+Tag = 22 bits, Index = 6 bits, Offset = 4 bits
+There are 64 sets total in the cache.
+At this associativity, that means a total of 512 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 16B.
+1-way set associative cache.
+Tag = 14 bits, Index = 14 bits, Offset = 4 bits
+There are 16384 sets total in the cache.
+At this associativity, that means a total of 16384 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2640824
+-----ACC----- 2703843
+0.9766928035392588
+Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
+Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-thru: 3773276
+write-thru:1.3955233347498357
+write-back:0.5546712586492633
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 33660
+-----ACC----- 39426
+0.8537513316085832
+Cache Hit Rate = 85.38% (Mis-rate: 14.62%)
+Total number of bytes tranferred write-back: 124880
+Total number of bytes tranferred write-thru: 2857228
+write-thru:72.47065388322427
+write-back:3.167452949830061
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2698077
+-----ACC----- 2703843
+0.9978674797316265
+Cache Hit Rate = 99.79% (Mis-rate: 0.21%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:70141---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 32B.
+8-way set associative cache.
+Tag = 22 bits, Index = 5 bits, Offset = 5 bits
+There are 32 sets total in the cache.
+At this associativity, that means a total of 256 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 32B.
+1-way set associative cache.
+Tag = 14 bits, Index = 13 bits, Offset = 5 bits
+There are 8192 sets total in the cache.
+At this associativity, that means a total of 8192 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2631489
+-----ACC----- 2703843
+0.9732403101807316
+Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
+Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-thru: 5080300
+write-thru:1.878918265594563
+write-back:1.183027268964951
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 46424
+-----ACC----- 52780
+0.8795755968169762
+Cache Hit Rate = 87.96% (Mis-rate: 12.04%)
+Total number of bytes tranferred write-back: 282336
+Total number of bytes tranferred write-thru: 2968364
+write-thru:56.240318302387266
+write-back:5.3492989768851835
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2697487
+-----ACC----- 2703843
+0.9976492717957367
+Cache Hit Rate = 99.76% (Mis-rate: 0.24%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:80386---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+8-way set associative cache.
+Tag = 22 bits, Index = 8 bits, Offset = 2 bits
+There are 256 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+4-way set associative cache.
+Tag = 16 bits, Index = 14 bits, Offset = 2 bits
+There are 16384 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2639944
+-----ACC----- 2703843
+0.9763673408552198
+Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
+Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-thru: 3020568
+write-thru:1.1171388279570966
+write-back:0.15920451002517527
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 20815
+-----ACC----- 26018
+0.8000230609577984
+Cache Hit Rate = 80.00% (Mis-rate: 20.00%)
+Total number of bytes tranferred write-back: 20888
+Total number of bytes tranferred write-thru: 2785784
+write-thru:107.07141209931586
+write-back:0.8028288108232762
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2698640
+-----ACC----- 2703843
+0.9980757018806196
+Cache Hit Rate = 99.81% (Mis-rate: 0.19%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:69735---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 8B.
+8-way set associative cache.
+Tag = 22 bits, Index = 7 bits, Offset = 3 bits
+There are 128 sets total in the cache.
+At this associativity, that means a total of 1024 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 8B.
+4-way set associative cache.
+Tag = 16 bits, Index = 13 bits, Offset = 3 bits
+There are 8192 sets total in the cache.
+At this associativity, that means a total of 32768 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2643249
+-----ACC----- 2703843
+0.9775896751401616
+Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
+Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-thru: 3249724
+write-thru:1.2018907902566829
+write-back:0.2862266781022419
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 26389
+-----ACC----- 30588
+0.8627239440303387
+Cache Hit Rate = 86.27% (Mis-rate: 13.73%)
+Total number of bytes tranferred write-back: 33744
+Total number of bytes tranferred write-thru: 2798564
+write-thru:91.4922191709167
+write-back:1.1031777167516674
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2699644
+-----ACC----- 2703843
+0.9984470252155913
+Cache Hit Rate = 99.84% (Mis-rate: 0.16%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:66733---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 16B.
+8-way set associative cache.
+Tag = 22 bits, Index = 6 bits, Offset = 4 bits
+There are 64 sets total in the cache.
+At this associativity, that means a total of 512 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 16B.
+4-way set associative cache.
+Tag = 16 bits, Index = 12 bits, Offset = 4 bits
+There are 4096 sets total in the cache.
+At this associativity, that means a total of 16384 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2640824
+-----ACC----- 2703843
+0.9766928035392588
+Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
+Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-thru: 3773276
+write-thru:1.3955233347498357
+write-back:0.5546712586492633
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 35928
+-----ACC----- 39426
+0.911276822401461
+Cache Hit Rate = 91.13% (Mis-rate: 8.87%)
+Total number of bytes tranferred write-back: 56464
+Total number of bytes tranferred write-thru: 2820940
+write-thru:71.55024603053822
+write-back:1.43215137219094
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2700345
+-----ACC----- 2703843
+0.9987062858309451
+Cache Hit Rate = 99.87% (Mis-rate: 0.13%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:70141---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 32B.
+8-way set associative cache.
+Tag = 22 bits, Index = 5 bits, Offset = 5 bits
+There are 32 sets total in the cache.
+At this associativity, that means a total of 256 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 32B.
+4-way set associative cache.
+Tag = 16 bits, Index = 11 bits, Offset = 5 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 8192 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2631489
+-----ACC----- 2703843
+0.9732403101807316
+Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
+Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-thru: 5080300
+write-thru:1.878918265594563
+write-back:1.183027268964951
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 49724
+-----ACC----- 52780
+0.9420992800303145
+Cache Hit Rate = 94.21% (Mis-rate: 5.79%)
+Total number of bytes tranferred write-back: 100960
+Total number of bytes tranferred write-thru: 2862764
+write-thru:54.23956043956044
+write-back:1.9128457749147405
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2700787
+-----ACC----- 2703843
+0.9988697568608829
+Cache Hit Rate = 99.89% (Mis-rate: 0.11%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:80386---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+8-way set associative cache.
+Tag = 22 bits, Index = 8 bits, Offset = 2 bits
+There are 256 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+8-way set associative cache.
+Tag = 17 bits, Index = 13 bits, Offset = 2 bits
+There are 8192 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2639944
+-----ACC----- 2703843
+0.9763673408552198
+Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
+Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-thru: 3020568
+write-thru:1.1171388279570966
+write-back:0.15920451002517527
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 20817
+-----ACC----- 26018
+0.8000999308171266
+Cache Hit Rate = 80.01% (Mis-rate: 19.99%)
+Total number of bytes tranferred write-back: 20804
+Total number of bytes tranferred write-thru: 2785776
+write-thru:107.07110461987854
+write-back:0.7996002767314936
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2698642
+-----ACC----- 2703843
+0.9980764415685378
+Cache Hit Rate = 99.81% (Mis-rate: 0.19%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:69735---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 8B.
+8-way set associative cache.
+Tag = 22 bits, Index = 7 bits, Offset = 3 bits
+There are 128 sets total in the cache.
+At this associativity, that means a total of 1024 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 8B.
+8-way set associative cache.
+Tag = 17 bits, Index = 12 bits, Offset = 3 bits
+There are 4096 sets total in the cache.
+At this associativity, that means a total of 32768 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2643249
+-----ACC----- 2703843
+0.9775896751401616
+Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
+Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-thru: 3249724
+write-thru:1.2018907902566829
+write-back:0.2862266781022419
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 26391
+-----ACC----- 30588
+0.8627893291486858
+Cache Hit Rate = 86.28% (Mis-rate: 13.72%)
+Total number of bytes tranferred write-back: 33576
+Total number of bytes tranferred write-thru: 2798548
+write-thru:91.49169608996992
+write-back:1.097685366810514
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2699646
+-----ACC----- 2703843
+0.9984477649035095
+Cache Hit Rate = 99.84% (Mis-rate: 0.16%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:66733---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 16B.
+8-way set associative cache.
+Tag = 22 bits, Index = 6 bits, Offset = 4 bits
+There are 64 sets total in the cache.
+At this associativity, that means a total of 512 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 16B.
+8-way set associative cache.
+Tag = 17 bits, Index = 11 bits, Offset = 4 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 16384 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2640824
+-----ACC----- 2703843
+0.9766928035392588
+Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
+Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-thru: 3773276
+write-thru:1.3955233347498357
+write-back:0.5546712586492633
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 35935
+-----ACC----- 39426
+0.91145437021255
+Cache Hit Rate = 91.15% (Mis-rate: 8.85%)
+Total number of bytes tranferred write-back: 55872
+Total number of bytes tranferred write-thru: 2820828
+write-thru:71.5474052655608
+write-back:1.4171359001674022
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2700352
+-----ACC----- 2703843
+0.998708874738659
+Cache Hit Rate = 99.87% (Mis-rate: 0.13%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:70141---
+---Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sjeng-10M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 32B.
+8-way set associative cache.
+Tag = 22 bits, Index = 5 bits, Offset = 5 bits
+There are 32 sets total in the cache.
+At this associativity, that means a total of 256 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 32B.
+8-way set associative cache.
+Tag = 17 bits, Index = 10 bits, Offset = 5 bits
+There are 1024 sets total in the cache.
+At this associativity, that means a total of 8192 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 10000000 trace lines.
+Num Uops (micro-ops): 			10000000
+--------------L1 Stats--------------
+-----HIT----- 2631489
+-----ACC----- 2703843
+0.9732403101807316
+Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
+Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-thru: 5080300
+write-thru:1.878918265594563
+write-back:1.183027268964951
+---L1 Activity:2703843---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 49729
+-----ACC----- 52780
+0.9421940128836681
+Cache Hit Rate = 94.22% (Mis-rate: 5.78%)
+Total number of bytes tranferred write-back: 98176
+Total number of bytes tranferred write-thru: 2862604
+write-thru:54.23652898825313
+write-back:1.8600985221674877
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 2700792
+-----ACC----- 2703843
+0.9988716060806785
+Cache Hit Rate = 99.89% (Mis-rate: 0.11%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:80386---
+---Latency:0.000000---

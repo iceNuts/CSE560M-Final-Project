@@ -13,9 +13,16 @@ public class Simulator
     // cache stuff
     public CacheStats L1_CacheStats = null;
     public CacheStats L2_CacheStats = null;
+    public CacheStats L2_Global_CacheStats = null;
 
     public Cache L1_Cache = null;
     public Cache L2_Cache = null;
+
+    public Cache missCache = null;
+    public Cache victimBuffer = null;
+
+    public boolean missCache_f = false;
+    public boolean victimBuffer_f = false;
 
     // print options, by default off
     public boolean verbose_f = false;
@@ -35,13 +42,17 @@ public class Simulator
 	// Customized Variables
 	public int storeCount = 0;
 	public int totalMemRef = 0;
-    
+
+    public int latencyCount = 0;
+    public int wbCount = 0;
+
     /*
      * Simple constructor for the simulator.
      */
     public Simulator() {
 	L1_CacheStats = new CacheStats();
 	L2_CacheStats = new CacheStats();
+    L2_Global_CacheStats = new CacheStats();
 
 	storeCount = 0;
     }
@@ -62,11 +73,15 @@ public class Simulator
      * This method is currently stripped down. It will just read in each instruction 
      * one at a time, and does not make any predictions. 
      */
+
     public void processTrace() throws IOException  {
         String line = "";    
         Uop currUop = null;
         
 		initTrace();
+
+        wbCount = 0;
+        latencyCount = 0;
         
         while (true) {
 	    line = traceReader.readLine();
@@ -83,7 +98,7 @@ public class Simulator
 	    // BEGIN WHERE YOU SHOULD MAKE CHANGES TO THIS FILE
 	    
 	    // Print this before you access the cache
-		
+
 		if(currUop.type == Uop.UopType.insn_LOAD || currUop.type == Uop.UopType.insn_STORE)
 		{
 			totalMemRef++;
@@ -95,25 +110,59 @@ public class Simulator
 		    
 		    boolean L1_hit_f = L1_Cache.access(currUop.addressForMemoryOp, wb_tag, currUop.type == Uop.UopType.insn_LOAD);
 		    L1_CacheStats.updateStat(L1_hit_f);
+            latencyCount += 1;
 
 		    // L1 Miss
+            boolean L2_hit_f = true;
 		    if (L1_hit_f == false)
 		    {
 		    	long []wb_tag2 = new long[1];
 		    	// Do something? L2 VictimBuffer? Miss Cache?
-		    	if (currUop.type == Uop.UopType.insn_LOAD) {
-		    		// Clear flag
-		    		wb_tag2[0] = -1;
-		    		boolean L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
-		    		L2_CacheStats.updateStat(L2_hit_f);
+
+		    	if (currUop.type == Uop.UopType.insn_LOAD) 
+                {
+
+                    // There is a mis cache
+                    if (missCache_f)
+                    {
+                        boolean missCache_hit = missCache.access(
+                         currUop.addressForMemoryOp, 
+                         wb_tag2,
+                         YES
+                        );
+                        latencyCount += 1;
+                        if (missCache_hit == NO) 
+                        {
+                            // Clear flag
+                            wb_tag2[0] = -1;
+                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
+                            L2_CacheStats.updateStat(L2_hit_f);
+                            latencyCount += 10;
+                            if (L2_hit_f == false)
+                                latencyCount += 100;
+                        }                 
+                    }
+                    // NO miss cache available
+                    else 
+                    {
+                        // Clear flag
+                        wb_tag2[0] = -1;
+                        L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
+                        L2_CacheStats.updateStat(L2_hit_f);
+                        latencyCount += 10;
+                        if (L2_hit_f == false)
+                            latencyCount += 100;
+                    }
 		    	}
 		    	// we need to write back
-				if (wb_tag[0] != -1) {
-					boolean L2_hit_f = L2_Cache.access(wb_tag[0], wb_tag2, false);
-					L2_CacheStats.updateStat(L2_hit_f);
+				if (wb_tag[0] != -1) 
+                {
+					L2_Cache.access(wb_tag[0], wb_tag2, false);
+                    wbCount++;
 				}
 		    }
-
+            // default to be hit/if miss then count
+            L2_Global_CacheStats.updateStat(L2_hit_f);
 			
 		    // Print this after you access the cache
 		    if (debug_f) 
@@ -140,7 +189,9 @@ public class Simulator
 		
 		L2_CacheStats.calculateRates();
 		L2_CacheStats.total_bytes_transferred_wt = 4*storeCount + (int)L2_CacheStats.totalMisses()*L2_Cache.blockSize;
-		L2_CacheStats.total_bytes_transferred_wb = L2_Cache.dirtyCount * L2_Cache.blockSize + (int)L2_CacheStats.totalMisses()*L2_Cache.blockSize;
+		L2_CacheStats.total_bytes_transferred_wb = (L2_Cache.dirtyCount + wbCount) * L2_Cache.blockSize + (int)L2_CacheStats.totalMisses()*L2_Cache.blockSize;
+   
+        L2_Global_CacheStats.calculateRates();
     }
     
     
@@ -154,8 +205,23 @@ public class Simulator
 			
 		System.out.println("--------------L1 Stats--------------");
 		L1_CacheStats.print(); 
-		System.out.println("--------------L2 Stats--------------");
+        System.out.format("---L1 Activity:%d---", L1_Cache.accessTime);
+
+        System.out.println();
+
+		System.out.println("--------------L2 LOCAL Stats--------------");
         L2_CacheStats.print(); 
+
+        System.out.println();
+
+        System.out.println("--------------L2 GLOBAL Stats--------------");
+        L2_Global_CacheStats.print();
+
+        System.out.format("---L2 Activity:%d---", L2_Cache.accessTime);
+
+        System.out.println();
+
+        System.out.format("---Latency:%f---\n\n", latencyCount/(double)totalMemRef);
 	
     }
 

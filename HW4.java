@@ -66,6 +66,7 @@ public class HW4
 			defaultCache_f = false;
             }
 
+
             if (arg.equals("-L2")) {
 		
 			sim.L2_Cache = new Cache(Integer.parseInt(args[i++]), 
@@ -73,6 +74,28 @@ public class HW4
 					Integer.parseInt(args[i++])); 
 
 			defaultCache_f = false;
+            }
+
+            if (arg.equals("-miss")) {
+        
+            int blk_size = Integer.parseInt(args[i++];
+            int way = Integer.parseInt(args[i++]);
+            sim.missCache = new Cache(blk_size*way, 
+                    blk_size), 
+                    way); 
+
+            sim.missCache_f = true;
+            }
+
+            if (arg.equals("-victim")) {
+        
+            int blk_size = Integer.parseInt(args[i++];
+            int way = Integer.parseInt(args[i++]);
+            sim.victimBuffer = new Cache(blk_size*way, 
+                    blk_size), 
+                    way); 
+
+            sim.victimBuffer_f = true;
             }
 
 	    // -t sjeng-1K

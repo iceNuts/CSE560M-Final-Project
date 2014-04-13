@@ -14,6 +14,7 @@ public class Cache {
 	
 	//Customized
 	public int dirtyCount = 0;
+    public int accessTime = 0;
         
     // don't touch!
     public final int addressSize = 32; // in bits
@@ -33,6 +34,7 @@ public class Cache {
     public Cache(int capacity, int blockSize, int associativity) {
 
 	dirtyCount = 0;
+    accessTime = 0;
 
 	this.capacity = capacity; // in B
 	this.blockSize = blockSize; // in B
@@ -92,6 +94,7 @@ public class Cache {
     public boolean access(long addr, long[] wb_tag, boolean isLoad) {
 	
 	// FIX ME for question 8
+    accessTime++;
 	
 	long addr_tag = getTag(addr);
 	int addr_index = getIndex(addr);
