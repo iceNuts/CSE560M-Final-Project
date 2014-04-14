@@ -15,6 +15,7 @@ public class Cache {
 	//Customized
 	public int dirtyCount = 0;
     public int accessTime = 0;
+    public int loadCount = 0;
         
     // don't touch!
     public final int addressSize = 32; // in bits
@@ -137,6 +138,7 @@ public class Cache {
 	// this is for load 
 	else {
 		if (!hit_f) {
+            loadCount++;
 			dirtyBits[addr_index][touchedWay] = false;
 			if (dirty) {
 				// we need to write back

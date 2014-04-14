@@ -14,6 +14,8 @@ public class Simulator
     public CacheStats L1_CacheStats = null;
     public CacheStats L2_CacheStats = null;
     public CacheStats L2_Global_CacheStats = null;
+    public int missCacheTraffic = 0;
+    public int victimBufferTraffic = 0;
 
     public Cache L1_Cache = null;
     public Cache L2_Cache = null;
@@ -222,13 +224,15 @@ public class Simulator
 		
     	L1_CacheStats.calculateRates();
 		L1_CacheStats.total_bytes_transferred_wt = 4*storeCount + (int)L1_CacheStats.totalMisses()*L1_Cache.blockSize;
-		L1_CacheStats.total_bytes_transferred_wb = L1_Cache.dirtyCount * L1_Cache.blockSize + (int)L1_CacheStats.totalMisses()*L1_Cache.blockSize;
+		L1_CacheStats.total_bytes_transferred_wb = (L1_Cache.loadCount + L1_Cache.dirtyCount) * L1_Cache.blockSize;
 		
 		L2_CacheStats.calculateRates();
 		L2_CacheStats.total_bytes_transferred_wt = 4*storeCount + (int)L2_CacheStats.totalMisses()*L2_Cache.blockSize;
-		L2_CacheStats.total_bytes_transferred_wb = (L2_Cache.dirtyCount + wbCount) * L2_Cache.blockSize + (int)L2_CacheStats.totalMisses()*L2_Cache.blockSize;
-   
+		L2_CacheStats.total_bytes_transferred_wb = (L2_Cache.loadCount + L2_Cache.dirtyCount) * L2_Cache.blockSize;
         L2_Global_CacheStats.calculateRates();
+
+        missCacheTraffic =  (missCache.loadCount + missCache.dirtyCount) * missCache.blockSize;
+        victimBufferTraffic = (victimBuffer.loadCount + victimBuffer.dirtyCount) * victimBuffer.blockSize;
     }
     
     
@@ -258,8 +262,12 @@ public class Simulator
 
         System.out.println();
 
-        System.out.format("---Latency:%f---\n\n", latencyCount/(double)totalMemRef);
-	
+        System.out.format("---Latency:%f---\n", latencyCount/(double)totalMemRef);
+
+        System.out.format("---MissCache Traffic:%d---\n", missCacheTraffic);
+
+	    System.out.format("---VictimBuffer Traffic:%d---\n\n", victimBufferTraffic);
+
     }
 
     public void printHeader() {
