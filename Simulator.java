@@ -179,14 +179,22 @@ public class Simulator
                 {
                     if (victimBuffer_f)
                     {
+                        wb_tag2[0] = -1;
                         victimBuffer.victim_f = false;
                         boolean victimBuffer_hit = victimBuffer.access(
                          wb_tag[0], 
                          wb_tag2,
                          false
                         );
+                        if (wb_tag2[0] != -1)
+                        {
+                            L2_Cache.access(wb_tag2[0], wb_tag2, false);
+                        }
                     }
-					L2_Cache.access(wb_tag[0], wb_tag2, false);
+                    else 
+                    {
+					   L2_Cache.access(wb_tag[0], wb_tag2, false);
+                    }
                     wbCount++;
 				}
 		    }
