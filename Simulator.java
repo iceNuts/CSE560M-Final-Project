@@ -231,8 +231,10 @@ public class Simulator
 		L2_CacheStats.total_bytes_transferred_wb = (L2_Cache.loadCount + L2_Cache.dirtyCount) * L2_Cache.blockSize;
         L2_Global_CacheStats.calculateRates();
 
-        missCacheTraffic =  (missCache.loadCount + missCache.dirtyCount) * missCache.blockSize;
-        victimBufferTraffic = (victimBuffer.loadCount + victimBuffer.dirtyCount) * victimBuffer.blockSize;
+        if (missCache_f)
+            missCacheTraffic =  (missCache.loadCount + missCache.dirtyCount) * missCache.blockSize;
+        if (victimBuffer_f)
+            victimBufferTraffic = (victimBuffer.loadCount + victimBuffer.dirtyCount) * victimBuffer.blockSize;
     }
     
     

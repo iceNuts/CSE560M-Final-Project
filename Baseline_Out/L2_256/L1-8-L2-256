@@ -23,10 +23,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9763673408552198
 Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
-Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-back: 278940
 Total number of bytes tranferred write-thru: 3020568
 write-thru:1.1171388279570966
-write-back:0.15920451002517527
+write-back:0.10316427396117304
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 19514
@@ -48,7 +48,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:69735---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.336773---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -73,10 +77,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9775896751401616
 Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
-Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-back: 533864
 Total number of bytes tranferred write-thru: 3249724
 write-thru:1.2018907902566829
-write-back:0.2862266781022419
+write-back:0.1974463753997551
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 24798
@@ -98,7 +102,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:66733---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.327268---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -123,10 +131,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9766928035392588
 Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
-Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-back: 1122256
 Total number of bytes tranferred write-thru: 3773276
 write-thru:1.3955233347498357
-write-back:0.5546712586492633
+write-back:0.41505960220323446
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 33660
@@ -148,7 +156,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:70141---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.359067---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -173,10 +185,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9732403101807316
 Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
-Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-back: 2572352
 Total number of bytes tranferred write-thru: 5080300
 write-thru:1.878918265594563
-write-back:1.183027268964951
+write-back:0.9513688479693533
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 46424
@@ -198,7 +210,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:80386---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.430276---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -223,10 +239,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9763673408552198
 Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
-Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-back: 278940
 Total number of bytes tranferred write-thru: 3020568
 write-thru:1.1171388279570966
-write-back:0.15920451002517527
+write-back:0.10316427396117304
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 20815
@@ -248,7 +264,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:69735---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.288656---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -273,10 +293,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9775896751401616
 Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
-Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-back: 533864
 Total number of bytes tranferred write-thru: 3249724
 write-thru:1.2018907902566829
-write-back:0.2862266781022419
+write-back:0.1974463753997551
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 26389
@@ -298,7 +318,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:66733---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.268425---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -323,10 +347,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9766928035392588
 Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
-Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-back: 1122256
 Total number of bytes tranferred write-thru: 3773276
 write-thru:1.3955233347498357
-write-back:0.5546712586492633
+write-back:0.41505960220323446
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 35928
@@ -348,7 +372,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:70141---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.275186---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -373,10 +401,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9732403101807316
 Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
-Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-back: 2572352
 Total number of bytes tranferred write-thru: 5080300
 write-thru:1.878918265594563
-write-back:1.183027268964951
+write-back:0.9513688479693533
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 49724
@@ -398,7 +426,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:80386---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.308228---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -423,10 +455,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9763673408552198
 Cache Hit Rate = 97.64% (Mis-rate: 2.36%)
-Total number of bytes tranferred write-back: 430464
+Total number of bytes tranferred write-back: 278940
 Total number of bytes tranferred write-thru: 3020568
 write-thru:1.1171388279570966
-write-back:0.15920451002517527
+write-back:0.10316427396117304
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 20817
@@ -448,7 +480,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:69735---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.288582---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -473,10 +509,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9775896751401616
 Cache Hit Rate = 97.76% (Mis-rate: 2.24%)
-Total number of bytes tranferred write-back: 773912
+Total number of bytes tranferred write-back: 533864
 Total number of bytes tranferred write-thru: 3249724
 write-thru:1.2018907902566829
-write-back:0.2862266781022419
+write-back:0.1974463753997551
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 26391
@@ -498,7 +534,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:66733---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.268351---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -523,10 +563,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9766928035392588
 Cache Hit Rate = 97.67% (Mis-rate: 2.33%)
-Total number of bytes tranferred write-back: 1499744
+Total number of bytes tranferred write-back: 1122256
 Total number of bytes tranferred write-thru: 3773276
 write-thru:1.3955233347498357
-write-back:0.5546712586492633
+write-back:0.41505960220323446
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 35935
@@ -548,7 +588,11 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:70141---
----Latency:0.000000---HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+---Latency:1.274927---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
 -----------------------------------------------------
 Trace name  				sjeng-10M
 --------------L1 INFO--------------
@@ -573,10 +617,10 @@ Num Uops (micro-ops): 			10000000
 -----ACC----- 2703843
 0.9732403101807316
 Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
-Total number of bytes tranferred write-back: 3198720
+Total number of bytes tranferred write-back: 2572352
 Total number of bytes tranferred write-thru: 5080300
 write-thru:1.878918265594563
-write-back:1.183027268964951
+write-back:0.9513688479693533
 ---L1 Activity:2703843---
 --------------L2 LOCAL Stats--------------
 -----HIT----- 49729
@@ -598,4 +642,7 @@ Total number of bytes tranferred write-thru: 0
 write-thru:0.0
 write-back:0.0
 ---L2 Activity:80386---
----Latency:0.000000---
+---Latency:1.308043---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
