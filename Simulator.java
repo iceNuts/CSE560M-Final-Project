@@ -14,6 +14,7 @@ public class Simulator
     public CacheStats L1_CacheStats = null;
     public CacheStats L2_CacheStats = null;
     public CacheStats L2_Global_CacheStats = null;
+    public CacheStats L1_Buffer_CompositeStats = null;
     public int missCacheTraffic = 0;
     public int victimBufferTraffic = 0;
 
@@ -55,7 +56,7 @@ public class Simulator
 	L1_CacheStats = new CacheStats();
 	L2_CacheStats = new CacheStats();
     L2_Global_CacheStats = new CacheStats();
-
+    L1_Buffer_CompositeStats =  new CacheStats();
 	storeCount = 0;
     }
 
@@ -114,6 +115,9 @@ public class Simulator
 		    L1_CacheStats.updateStat(L1_hit_f);
             latencyCount += 1;
 
+            if (L1_hit_f || (!missCache_f && !victimBuffer_f))
+                L1_Buffer_CompositeStats.updateStat(L1_hit_f);
+
 		    // L1 Miss
             boolean L2_hit_f = true;
 		    if (L1_hit_f == false)
@@ -133,6 +137,7 @@ public class Simulator
                          true
                         );
                         latencyCount += 1;
+                        L1_Buffer_CompositeStats.updateStat(missCache_hit);
                         if (missCache_hit == false) 
                         {
                             // Clear flag
@@ -153,6 +158,7 @@ public class Simulator
                          true
                         );
                         latencyCount += 1;
+                        L1_Buffer_CompositeStats.updateStat(victimBuffer_hit);
                         if (victimBuffer_hit == false) 
                         {
                             // Clear flag
@@ -231,6 +237,8 @@ public class Simulator
 		L2_CacheStats.total_bytes_transferred_wb = (L2_Cache.loadCount + L2_Cache.dirtyCount) * L2_Cache.blockSize;
         L2_Global_CacheStats.calculateRates();
 
+        L1_Buffer_CompositeStats.calculateRates();
+
         if (missCache_f)
             missCacheTraffic =  (missCache.loadCount + missCache.dirtyCount) * missCache.blockSize;
         if (victimBuffer_f)
@@ -267,8 +275,15 @@ public class Simulator
         System.out.format("---Latency:%f---\n", latencyCount/(double)totalMemRef);
 
         System.out.format("---MissCache Traffic:%d---\n", missCacheTraffic);
+        if (missCache_f)
+            System.out.format("---MissCache Access:%d---\n", missCache.accessTime);
 
 	    System.out.format("---VictimBuffer Traffic:%d---\n\n", victimBufferTraffic);
+        if (victimBuffer_f)
+            System.out.format("---VictimBuffer Access:%d---\n\n", victimBuffer.accessTime);
+
+        System.out.println("---L1 & Buffer(if exist) Composite Stats:%f---");
+        L1_Buffer_CompositeStats.print();
 
     }
 
@@ -282,6 +297,16 @@ public class Simulator
 	L1_Cache.printConfig();
 	System.out.println("--------------L2 INFO--------------");
 	L2_Cache.printConfig();
+    System.out.println("--------------Miss Cache INFO--------------");
+    if (missCache != null)
+        missCache.printConfig();
+    else
+        System.out.println("NO MISSCACHE");
+    System.out.println("--------------VictimBuffer INFO--------------");
+    if (victimBuffer != null)
+        victimBuffer.printConfig();
+    else
+        System.out.println("NO VICTIMBUFFER");
 	System.out.format("Instruction Limit\t\t\t%s\n", insnLimit_f ? Integer.toString(uopLimit) : "none");	
     }
     

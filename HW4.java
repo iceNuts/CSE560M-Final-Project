@@ -32,6 +32,7 @@ public class HW4
 
 	int i = 0;
 	String arg;
+    int blk_size = 0;
 		
 	// use the command line arguments to customize the simulator each run
 	while (i < args.length) {
@@ -58,9 +59,10 @@ public class HW4
 
 	    // -cache C B A
             if (arg.equals("-L1")) {
-		
-			sim.L1_Cache = new Cache(Integer.parseInt(args[i++]), 
-					Integer.parseInt(args[i++]), 
+            int capacity = Integer.parseInt(args[i++]);
+		    blk_size = Integer.parseInt(args[i++]);
+			sim.L1_Cache = new Cache(capacity, 
+					blk_size, 
 					Integer.parseInt(args[i++])); 
 
 			defaultCache_f = false;
@@ -78,7 +80,6 @@ public class HW4
 
             if (arg.equals("-miss")) {
         
-            int blk_size = Integer.parseInt(args[i++]);
             int way = Integer.parseInt(args[i++]);
             sim.missCache = new Cache(blk_size*way, 
                     blk_size, 
@@ -89,7 +90,6 @@ public class HW4
 
             if (arg.equals("-victim")) {
         
-            int blk_size = Integer.parseInt(args[i++]);
             int way = Integer.parseInt(args[i++]);
             sim.victimBuffer = new Cache(blk_size*way, 
                     blk_size, 
