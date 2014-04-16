@@ -144,7 +144,7 @@ public class Simulator
                             wb_tag2[0] = -1;
                             L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
                             L2_CacheStats.updateStat(L2_hit_f);
-                            latencyCount += 10;
+                            latencyCount += 20;
                             if (L2_hit_f == false)
                                 latencyCount += 100;
                         }                 
@@ -165,7 +165,7 @@ public class Simulator
                             wb_tag2[0] = -1;
                             L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
                             L2_CacheStats.updateStat(L2_hit_f);
-                            latencyCount += 10;
+                            latencyCount += 20;
                             if (L2_hit_f == false)
                                 latencyCount += 100;
                         }  
@@ -177,7 +177,7 @@ public class Simulator
                         wb_tag2[0] = -1;
                         L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
                         L2_CacheStats.updateStat(L2_hit_f);
-                        latencyCount += 10;
+                        latencyCount += 20;
                         if (L2_hit_f == false)
                             latencyCount += 100;
                     }
