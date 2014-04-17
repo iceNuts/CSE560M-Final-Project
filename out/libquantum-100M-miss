@@ -1,0 +1,73 @@
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				libquantum-100M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+1-way set associative cache.
+Tag = 19 bits, Index = 11 bits, Offset = 2 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+1-way set associative cache.
+Tag = 14 bits, Index = 16 bits, Offset = 2 bits
+There are 65536 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 20B. Each block = 4B.
+5-way set associative cache.
+Tag = 30 bits, Index = 0 bits, Offset = 2 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 21869892
+-----ACC----- 30260916
+0.7227108392885397
+Cache Hit Rate = 72.27% (Mis-rate: 27.73%)
+Total number of bytes tranferred write-back: 45914840
+Total number of bytes tranferred write-thru: 47757788
+write-thru:1.5782003426466007
+write-back:1.5172984188581733
+---L1 Activity:30260916---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 8351585
+-----ACC----- 8388469
+0.9956030117057117
+Cache Hit Rate = 99.56% (Mis-rate: 0.44%)
+Total number of bytes tranferred write-back: 161268
+Total number of bytes tranferred write-thru: 14341228
+write-thru:1.7096359299891315
+write-back:0.01922496226665438
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 30224032
+-----ACC----- 30260916
+0.9987811340542369
+Cache Hit Rate = 99.88% (Mis-rate: 0.12%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:11478582---
+---Latency:6.943190---
+---MissCache Traffic:33553876---
+---MissCache Access:8388597---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 21870020
+-----ACC----- 30258489
+0.722773037344991
+Cache Hit Rate = 72.28% (Mis-rate: 27.72%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0

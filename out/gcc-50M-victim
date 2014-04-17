@@ -1,0 +1,74 @@
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				gcc-50M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+1-way set associative cache.
+Tag = 19 bits, Index = 11 bits, Offset = 2 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+1-way set associative cache.
+Tag = 14 bits, Index = 16 bits, Offset = 2 bits
+There are 65536 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+NO MISSCACHE
+--------------VictimBuffer INFO--------------
+Cache size  = 20B. Each block = 4B.
+5-way set associative cache.
+Tag = 30 bits, Index = 0 bits, Offset = 2 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+Instruction Limit			none
+Processed 49999999 trace lines.
+Num Uops (micro-ops): 			49999999
+--------------L1 Stats--------------
+-----HIT----- 14823368
+-----ACC----- 15706865
+0.9437509012778807
+Cache Hit Rate = 94.38% (Mis-rate: 5.62%)
+Total number of bytes tranferred write-back: 3991776
+Total number of bytes tranferred write-thru: 24357872
+write-thru:1.5507787200055516
+write-back:0.25414212193203417
+---L1 Activity:15706865---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 468470
+-----ACC----- 556592
+0.8416757696840774
+Cache Hit Rate = 84.17% (Mis-rate: 15.83%)
+Total number of bytes tranferred write-back: 398516
+Total number of bytes tranferred write-thru: 21176372
+write-thru:38.0464900681289
+write-back:0.7159930433782735
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 15618743
+-----ACC----- 15706865
+0.994389586973594
+Cache Hit Rate = 99.44% (Mis-rate: 0.56%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:657347---
+---Latency:2.307177---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:3824860---
+
+---VictimBuffer Access:997944---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 14854394
+-----ACC----- 15410986
+0.9638834270565168
+Cache Hit Rate = 96.39% (Mis-rate: 3.61%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0

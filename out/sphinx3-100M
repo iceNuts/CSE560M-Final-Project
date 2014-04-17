@@ -1,0 +1,67 @@
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 8192B. Each block = 4B.
+1-way set associative cache.
+Tag = 19 bits, Index = 11 bits, Offset = 2 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 262144B. Each block = 4B.
+1-way set associative cache.
+Tag = 14 bits, Index = 16 bits, Offset = 2 bits
+There are 65536 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+NO MISSCACHE
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32201699
+-----ACC----- 33141988
+0.9716284671879067
+Cache Hit Rate = 97.16% (Mis-rate: 2.84%)
+Total number of bytes tranferred write-back: 4085812
+Total number of bytes tranferred write-thru: 59568340
+write-thru:1.7973677378677464
+write-back:0.12328204331013577
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 590482
+-----ACC----- 626936
+0.9418537139357127
+Cache Hit Rate = 94.19% (Mis-rate: 5.81%)
+Total number of bytes tranferred write-back: 280612
+Total number of bytes tranferred write-thru: 55953000
+write-thru:89.2483443286077
+write-back:0.4475927367386783
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33105534
+-----ACC----- 33141988
+0.9989000659827648
+Cache Hit Rate = 99.89% (Mis-rate: 0.11%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:1021453---
+---Latency:1.488327---
+---MissCache Traffic:0---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32201699
+-----ACC----- 33141988
+0.9716284671879067
+Cache Hit Rate = 97.16% (Mis-rate: 2.84%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
