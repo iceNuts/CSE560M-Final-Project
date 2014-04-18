@@ -1,0 +1,584 @@
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 4B.
+1-way set associative cache.
+Tag = 18 bits, Index = 12 bits, Offset = 2 bits
+There are 4096 sets total in the cache.
+At this associativity, that means a total of 4096 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 4B.
+4-way set associative cache.
+Tag = 15 bits, Index = 15 bits, Offset = 2 bits
+There are 32768 sets total in the cache.
+At this associativity, that means a total of 131072 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 20B. Each block = 4B.
+5-way set associative cache.
+Tag = 30 bits, Index = 0 bits, Offset = 2 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32674454
+-----ACC----- 33141988
+0.9858930007457609
+Cache Hit Rate = 98.59% (Mis-rate: 1.41%)
+Total number of bytes tranferred write-back: 2007744
+Total number of bytes tranferred write-thru: 57677320
+write-thru:1.74030960363633
+write-back:0.06058007141876945
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 191449
+-----ACC----- 208024
+0.9203216936507326
+Cache Hit Rate = 92.03% (Mis-rate: 7.97%)
+Total number of bytes tranferred write-back: 76132
+Total number of bytes tranferred write-thru: 55873484
+write-thru:268.59152790062683
+write-back:0.36597700265354
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33125413
+-----ACC----- 33141988
+0.9994998791261406
+Cache Hit Rate = 99.95% (Mis-rate: 0.05%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:414427---
+---Latency:1.203295---
+---MissCache Traffic:832096---
+---MissCache Access:295533---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32761963
+-----ACC----- 32969987
+0.9936905040332591
+Cache Hit Rate = 99.37% (Mis-rate: 0.63%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 8B.
+1-way set associative cache.
+Tag = 18 bits, Index = 11 bits, Offset = 3 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 8B.
+4-way set associative cache.
+Tag = 15 bits, Index = 14 bits, Offset = 3 bits
+There are 16384 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 40B. Each block = 8B.
+5-way set associative cache.
+Tag = 29 bits, Index = 0 bits, Offset = 3 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32710363
+-----ACC----- 33141988
+0.9869764903662387
+Cache Hit Rate = 98.70% (Mis-rate: 1.30%)
+Total number of bytes tranferred write-back: 3738936
+Total number of bytes tranferred write-thru: 59260184
+write-thru:1.7880696836894636
+write-back:0.11281568263195316
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 174440
+-----ACC----- 186840
+0.9336330550203382
+Cache Hit Rate = 93.36% (Mis-rate: 6.64%)
+Total number of bytes tranferred write-back: 126632
+Total number of bytes tranferred write-thru: 55906384
+write-thru:299.2206379790195
+write-back:0.6777563690858489
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33129588
+-----ACC----- 33141988
+0.9996258522572635
+Cache Hit Rate = 99.96% (Mis-rate: 0.04%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:378878---
+---Latency:1.175386---
+---MissCache Traffic:1494720---
+---MissCache Access:275329---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32798852
+-----ACC----- 32985692
+0.9943357259262592
+Cache Hit Rate = 99.43% (Mis-rate: 0.57%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 16B.
+1-way set associative cache.
+Tag = 18 bits, Index = 10 bits, Offset = 4 bits
+There are 1024 sets total in the cache.
+At this associativity, that means a total of 1024 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 16B.
+4-way set associative cache.
+Tag = 15 bits, Index = 13 bits, Offset = 4 bits
+There are 8192 sets total in the cache.
+At this associativity, that means a total of 32768 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 80B. Each block = 16B.
+5-way set associative cache.
+Tag = 28 bits, Index = 0 bits, Offset = 4 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32700198
+-----ACC----- 33141988
+0.98666977973681
+Cache Hit Rate = 98.67% (Mis-rate: 1.33%)
+Total number of bytes tranferred write-back: 8138144
+Total number of bytes tranferred write-thru: 62875824
+write-thru:1.8971651308304136
+write-back:0.245553887714883
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 184417
+-----ACC----- 190791
+0.9665917155421377
+Cache Hit Rate = 96.66% (Mis-rate: 3.34%)
+Total number of bytes tranferred write-back: 130832
+Total number of bytes tranferred write-thru: 55909168
+write-thru:293.03881210329627
+write-back:0.685734652053818
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33135614
+-----ACC----- 33141988
+0.9998076759909514
+Cache Hit Rate = 99.98% (Mis-rate: 0.02%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:383376---
+---Latency:1.161174---
+---MissCache Traffic:3052656---
+---MissCache Access:316049---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32825456
+-----ACC----- 33016247
+0.9942212995922886
+Cache Hit Rate = 99.42% (Mis-rate: 0.58%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 32B.
+1-way set associative cache.
+Tag = 18 bits, Index = 9 bits, Offset = 5 bits
+There are 512 sets total in the cache.
+At this associativity, that means a total of 512 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 32B.
+4-way set associative cache.
+Tag = 15 bits, Index = 12 bits, Offset = 5 bits
+There are 4096 sets total in the cache.
+At this associativity, that means a total of 16384 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 160B. Each block = 32B.
+5-way set associative cache.
+Tag = 27 bits, Index = 0 bits, Offset = 5 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32607112
+-----ACC----- 33141988
+0.9838610767706512
+Cache Hit Rate = 98.39% (Mis-rate: 1.61%)
+Total number of bytes tranferred write-back: 19377440
+Total number of bytes tranferred write-thru: 72923216
+write-thru:2.200327149958536
+write-back:0.5846794706461181
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 238427
+-----ACC----- 241792
+0.986083079671784
+Cache Hit Rate = 98.61% (Mis-rate: 1.39%)
+Total number of bytes tranferred write-back: 138688
+Total number of bytes tranferred write-thru: 55914864
+write-thru:231.25191900476443
+write-back:0.5735839068290101
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33138623
+-----ACC----- 33141988
+0.9998984671649751
+Cache Hit Rate = 99.99% (Mis-rate: 0.01%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:442632---
+---Latency:1.190164---
+---MissCache Traffic:7737344---
+---MissCache Access:404705---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32770025
+-----ACC----- 33011817
+0.9926755925007097
+Cache Hit Rate = 99.27% (Mis-rate: 0.73%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 4B.
+2-way set associative cache.
+Tag = 19 bits, Index = 11 bits, Offset = 2 bits
+There are 2048 sets total in the cache.
+At this associativity, that means a total of 4096 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 4B.
+4-way set associative cache.
+Tag = 15 bits, Index = 15 bits, Offset = 2 bits
+There are 32768 sets total in the cache.
+At this associativity, that means a total of 131072 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 20B. Each block = 4B.
+5-way set associative cache.
+Tag = 30 bits, Index = 0 bits, Offset = 2 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32951322
+-----ACC----- 33141988
+0.9942469956841454
+Cache Hit Rate = 99.42% (Mis-rate: 0.58%)
+Total number of bytes tranferred write-back: 756724
+Total number of bytes tranferred write-thru: 56569848
+write-thru:1.7068936238827919
+write-back:0.02283278842536543
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 95070
+-----ACC----- 111651
+0.8514925974688986
+Cache Hit Rate = 85.15% (Mis-rate: 14.85%)
+Total number of bytes tranferred write-back: 75932
+Total number of bytes tranferred write-thru: 55873508
+write-thru:500.42998271399273
+write-back:0.6800834743979006
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33125407
+-----ACC----- 33141988
+0.9994996980869102
+Cache Hit Rate = 99.95% (Mis-rate: 0.05%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:189134---
+---Latency:1.130884---
+---MissCache Traffic:446604---
+---MissCache Access:111698---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32951369
+-----ACC----- 33063020
+0.9966230852475061
+Cache Hit Rate = 99.66% (Mis-rate: 0.34%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 8B.
+2-way set associative cache.
+Tag = 19 bits, Index = 10 bits, Offset = 3 bits
+There are 1024 sets total in the cache.
+At this associativity, that means a total of 2048 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 8B.
+4-way set associative cache.
+Tag = 15 bits, Index = 14 bits, Offset = 3 bits
+There are 16384 sets total in the cache.
+At this associativity, that means a total of 65536 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 40B. Each block = 8B.
+5-way set associative cache.
+Tag = 29 bits, Index = 0 bits, Offset = 3 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32973666
+-----ACC----- 33141988
+0.9949211857779926
+Cache Hit Rate = 99.49% (Mis-rate: 0.51%)
+Total number of bytes tranferred write-back: 1398888
+Total number of bytes tranferred write-thru: 57153760
+write-thru:1.7245121203954332
+write-back:0.042208934479126596
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 96394
+-----ACC----- 108800
+0.8859742647058824
+Cache Hit Rate = 88.60% (Mis-rate: 11.40%)
+Total number of bytes tranferred write-back: 126096
+Total number of bytes tranferred write-thru: 55906432
+write-thru:513.8458823529412
+write-back:1.158970588235294
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33129582
+-----ACC----- 33141988
+0.9996256712180331
+Cache Hit Rate = 99.96% (Mis-rate: 0.04%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:174800---
+---Latency:1.116223---
+---MissCache Traffic:870400---
+---MissCache Access:108861---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32973727
+-----ACC----- 33082527
+0.9967112548566801
+Cache Hit Rate = 99.67% (Mis-rate: 0.33%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 16B.
+2-way set associative cache.
+Tag = 19 bits, Index = 9 bits, Offset = 4 bits
+There are 512 sets total in the cache.
+At this associativity, that means a total of 1024 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 16B.
+4-way set associative cache.
+Tag = 15 bits, Index = 13 bits, Offset = 4 bits
+There are 8192 sets total in the cache.
+At this associativity, that means a total of 32768 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 80B. Each block = 16B.
+5-way set associative cache.
+Tag = 28 bits, Index = 0 bits, Offset = 4 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 33027519
+-----ACC----- 33141988
+0.9965461033900561
+Cache Hit Rate = 99.65% (Mis-rate: 0.35%)
+Total number of bytes tranferred write-back: 1950384
+Total number of bytes tranferred write-thru: 57638688
+write-thru:1.7391439523784753
+write-back:0.05884933637656257
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 73728
+-----ACC----- 80106
+0.920380495843008
+Cache Hit Rate = 92.04% (Mis-rate: 7.96%)
+Total number of bytes tranferred write-back: 130432
+Total number of bytes tranferred write-thru: 55909232
+write-thru:697.9406286670162
+write-back:1.628242578583377
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33135610
+-----ACC----- 33141988
+0.9998075552981311
+Cache Hit Rate = 99.98% (Mis-rate: 0.02%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:121649---
+---Latency:1.077261---
+---MissCache Traffic:1281696---
+---MissCache Access:80356---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 33027769
+-----ACC----- 33107875
+0.9975804548011613
+Cache Hit Rate = 99.76% (Mis-rate: 0.24%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+HW 4 Printout for i-forgot-to-replace-this-string-with-my-wustlkey
+-----------------------------------------------------
+Trace name  				sphinx3-100M
+--------------L1 INFO--------------
+Cache size  = 16384B. Each block = 32B.
+2-way set associative cache.
+Tag = 19 bits, Index = 8 bits, Offset = 5 bits
+There are 256 sets total in the cache.
+At this associativity, that means a total of 512 cache lines.
+(Assuming a 32-bit address.)
+--------------L2 INFO--------------
+Cache size  = 524288B. Each block = 32B.
+4-way set associative cache.
+Tag = 15 bits, Index = 12 bits, Offset = 5 bits
+There are 4096 sets total in the cache.
+At this associativity, that means a total of 16384 cache lines.
+(Assuming a 32-bit address.)
+--------------Miss Cache INFO--------------
+Cache size  = 160B. Each block = 32B.
+5-way set associative cache.
+Tag = 27 bits, Index = 0 bits, Offset = 5 bits
+There are 1 sets total in the cache.
+At this associativity, that means a total of 5 cache lines.
+(Assuming a 32-bit address.)
+--------------VictimBuffer INFO--------------
+NO VICTIMBUFFER
+Instruction Limit			none
+Processed 100000000 trace lines.
+Num Uops (micro-ops): 			100000000
+--------------L1 Stats--------------
+-----HIT----- 32832147
+-----ACC----- 33141988
+0.990651103971192
+Cache Hit Rate = 99.07% (Mis-rate: 0.93%)
+Total number of bytes tranferred write-back: 11982656
+Total number of bytes tranferred write-thru: 65722096
+write-thru:1.9830462795412274
+write-back:0.3615551366441868
+---L1 Activity:33141988---
+--------------L2 LOCAL Stats--------------
+-----HIT----- 122384
+-----ACC----- 125752
+0.9732171257713595
+Cache Hit Rate = 97.32% (Mis-rate: 2.68%)
+Total number of bytes tranferred write-back: 138848
+Total number of bytes tranferred write-thru: 55914960
+write-thru:444.64469749984096
+write-back:1.104141484827279
+
+--------------L2 GLOBAL Stats--------------
+-----HIT----- 33138620
+-----ACC----- 33141988
+0.99989837664536
+Cache Hit Rate = 99.99% (Mis-rate: 0.01%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0
+---L2 Activity:236405---
+---Latency:1.105392---
+---MissCache Traffic:4024064---
+---MissCache Access:263805---
+---VictimBuffer Traffic:0---
+
+---L1 & Buffer(if exist) Composite Stats:%f---
+-----HIT----- 32970200
+-----ACC----- 33095952
+0.9962003812429991
+Cache Hit Rate = 99.62% (Mis-rate: 0.38%)
+Total number of bytes tranferred write-back: 0
+Total number of bytes tranferred write-thru: 0
+write-thru:0.0
+write-back:0.0

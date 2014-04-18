@@ -4,7 +4,7 @@
 temp/*
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+traces/*
 # Package Files #
 *.jar
 *.war
