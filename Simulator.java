@@ -120,25 +120,29 @@ public class Simulator
 
 		    // L1 Miss
             boolean L2_hit_f = true;
+            long []wb_tag2 = new long[1];
 		    if (L1_hit_f == false)
 		    {
-		    	long []wb_tag2 = new long[1];
 		    	// Do something? L2 VictimBuffer? Miss Cache?
 
-		    	if (currUop.type == Uop.UopType.insn_LOAD) 
+		    	if (1/* whatever load or store is */)//(currUop.type == Uop.UopType.insn_LOAD) 
                 {
 
-                    // There is a mis cache
+                    // There is a miss cache
                     if (missCache_f)
                     {
+                        long wbTag = 0;
+                        wb_tag2[0] = -1;
                         boolean missCache_hit = missCache.access(
                          currUop.addressForMemoryOp, 
                          wb_tag2,
-                         true
+                         currUop.type == Uop.UopType.insn_LOAD
                         );
                         latencyCount += 1;
+                        wbTag = wb_tag2[0];
                         L1_Buffer_CompositeStats.updateStat(missCache_hit);
-                        if (missCache_hit == false) 
+
+                        if (missCache_hit == false && currUop.type == Uop.UopType.insn_LOAD) 
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
@@ -147,7 +151,15 @@ public class Simulator
                             latencyCount += 23;
                             if (L2_hit_f == false)
                                 latencyCount += 100;
-                        }                 
+                        } 
+
+                        // we need to write back
+                        if (wbTag != -1) 
+                        {
+                            L2_Cache.access(wbTag, wb_tag2, false);
+                            wbCount++;
+                        } 
+
                     }
                     else if (victimBuffer_f)
                     {
@@ -155,11 +167,15 @@ public class Simulator
                         boolean victimBuffer_hit = victimBuffer.access(
                          currUop.addressForMemoryOp, 
                          wb_tag2,
-                         true
+                         currUop.type == Uop.UopType.insn_LOAD
                         );
                         latencyCount += 1;
                         L1_Buffer_CompositeStats.updateStat(victimBuffer_hit);
-                        if (victimBuffer_hit == false) 
+                        if (victimBuffer_hit == true)
+                        {
+                            // swap wb_tag[0] with currUop.addressForMemoryOp
+                        }
+                        else if (victimBuffer_hit == false) 
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
@@ -168,7 +184,10 @@ public class Simulator
                             latencyCount += 23;
                             if (L2_hit_f == false)
                                 latencyCount += 100;
-                        }  
+                            // write back wb_tag[0] to victim buffer
+
+                            // write back wb_tag2[0] to L2 Cache
+                        } 
                     }
                     // NO miss cache available
                     else 
@@ -180,31 +199,11 @@ public class Simulator
                         latencyCount += 23;
                         if (L2_hit_f == false)
                             latencyCount += 100;
+
+                        // write back wb_tag[0] to L2
                     }
 		    	}
-		    	// we need to write back
-				if (wb_tag[0] != -1) 
-                {
-                    if (victimBuffer_f)
-                    {
-                        wb_tag2[0] = -1;
-                        victimBuffer.victim_f = false;
-                        boolean victimBuffer_hit = victimBuffer.access(
-                         wb_tag[0], 
-                         wb_tag2,
-                         false
-                        );
-                        if (wb_tag2[0] != -1)
-                        {
-                            L2_Cache.access(wb_tag2[0], wb_tag2, false);
-                        }
-                    }
-                    else 
-                    {
-					   L2_Cache.access(wb_tag[0], wb_tag2, false);
-                    }
-                    wbCount++;
-				}
+		    	
 		    }
             // default to be hit/if miss then count
             L2_Global_CacheStats.updateStat(L2_hit_f);
