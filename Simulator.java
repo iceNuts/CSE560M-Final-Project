@@ -204,7 +204,7 @@ public class Simulator
                             if (L2_hit_f == false)
                                 latencyCount += 100;
                             // write back wb_tag[0] to victim buffer
-                            if (wb_tag[0] == -1) {
+                            if (wb_tag[0] != -1) {
                                 victimBuffer.victim_f = false;
                                 victimBuffer.access(
                                     wb_tag[0], 
@@ -213,7 +213,7 @@ public class Simulator
                                 );
                             }
                             // write back wb_tag2[0] to L2 Cache
-                            if (wb_tag2[0] == -1)
+                            if (wb_tag2[0] != -1)
                             {
                                 L2_Cache.access(wb_tag2[0], wb_tag2, false);
                             }
