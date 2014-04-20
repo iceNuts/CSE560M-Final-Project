@@ -18,6 +18,9 @@ public class Simulator
     public int missCacheTraffic = 0;
     public int victimBufferTraffic = 0;
 
+    public int missCacheAccess = 0;
+    public int victimBufferAccess = 0;
+
     public Cache L1_Cache = null;
     public Cache L2_Cache = null;
 
@@ -58,6 +61,10 @@ public class Simulator
     L2_Global_CacheStats = new CacheStats();
     L1_Buffer_CompositeStats =  new CacheStats();
 	storeCount = 0;
+    missCacheTraffic = 0;
+    victimBufferTraffic = 0;
+    missCacheAccess = 0;
+    victimBufferAccess = 0;
     }
 
     /*
@@ -141,12 +148,13 @@ public class Simulator
                         latencyCount += 1;
                         wbTag = wb_tag2[0];
                         L1_Buffer_CompositeStats.updateStat(missCache_hit);
+                        missCacheAccess++;
 
                         if (missCache_hit == false) 
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
-                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
+                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, currUop.type == Uop.UopType.insn_LOAD);
                             L2_CacheStats.updateStat(L2_hit_f);
                             latencyCount += 23;
                             if (L2_hit_f == false)
@@ -172,15 +180,17 @@ public class Simulator
                         );
                         latencyCount += 1;
                         L1_Buffer_CompositeStats.updateStat(victimBuffer_hit);
+                        victimBufferAccess++;
+
                         if (victimBuffer_hit == true)
                         {
                             // swap wb_tag[0] with currUop.addressForMemoryOp
-                            if (wb_tag[0] == -1) {
+                            if (wb_tag[0] != -1) {
                                 victimBuffer.victim_f = false;
                                 victimBuffer.access(
                                     wb_tag[0], 
                                     wb_tag2,
-                                    currUop.type == Uop.UopType.insn_LOAD
+                                    false
                                 );
                             }
                         }
@@ -188,7 +198,7 @@ public class Simulator
                         {
                             // Clear flag
                             wb_tag2[0] = -1;
-                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, true);
+                            L2_hit_f =  L2_Cache.access(currUop.addressForMemoryOp, wb_tag2, currUop.type == Uop.UopType.insn_LOAD);
                             L2_CacheStats.updateStat(L2_hit_f);
                             latencyCount += 23;
                             if (L2_hit_f == false)
@@ -199,13 +209,13 @@ public class Simulator
                                 victimBuffer.access(
                                     wb_tag[0], 
                                     wb_tag2,
-                                    currUop.type == Uop.UopType.insn_LOAD
+                                    false
                                 );
                             }
                             // write back wb_tag2[0] to L2 Cache
                             if (wb_tag2[0] == -1)
                             {
-                                L2_Cache.access(wb_tag2[0], wb_tag2, true);
+                                L2_Cache.access(wb_tag2[0], wb_tag2, false);
                             }
                         } 
                     }
@@ -299,11 +309,11 @@ public class Simulator
 
         System.out.format("---MissCache Traffic:%d---\n", missCacheTraffic);
         if (missCache_f)
-            System.out.format("---MissCache Access:%d---\n", missCache.accessTime);
+            System.out.format("---MissCache Access:%d---\n", missCacheAccess);
 
 	    System.out.format("---VictimBuffer Traffic:%d---\n\n", victimBufferTraffic);
         if (victimBuffer_f)
-            System.out.format("---VictimBuffer Access:%d---\n\n", victimBuffer.accessTime);
+            System.out.format("---VictimBuffer Access:%d---\n\n", victimBufferAccess);
 
         System.out.println("---L1 & Buffer(if exist) Composite Stats:%f---");
         L1_Buffer_CompositeStats.print();
